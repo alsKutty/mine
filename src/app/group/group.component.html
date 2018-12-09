@@ -1,0 +1,37 @@
+<!-- Card -->
+
+
+
+<!-- Bootstrap CSS -->
+<!-- jQuery first, then Bootstrap JS. -->
+<!-- Nav tabs -->
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" href="#groups" role="tab" data-toggle="tab">Groups</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#manage" role="tab" data-toggle="tab" (click)="fetchmygroup()">Manage</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link">+</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content"  >
+  <div role="tabpanel" class="tab-pane fade in active show group-panel" id="groups" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"  [scrollWindow]="false" (scrolled)="groupscroll()">
+    <div class="row" >
+      <div class="col">
+        <app-group-list *ngFor="let group of groups" [group]= "group"></app-group-list>
+      </div>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane fade manage-panel" id="manage" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"  [scrollWindow]="false" (scrolled)="managescroll()">
+    <div class="row" >
+      <div class="col">
+        <app-group-list *ngFor="let manage of manages" [group]= "manage"></app-group-list>
+      </div>
+    </div>
+  </div>
+</div>

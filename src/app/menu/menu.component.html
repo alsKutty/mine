@@ -1,0 +1,58 @@
+<nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark mine-header" *ngIf="isLoggedIn | async">
+  <span class="navbar-toggler-icon leftmenutrigger"></span>
+  <a class="navbar-brand">LOGO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav animate side-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/leaders">
+          <i class="fas fa-comment"></i> Leaders on mine
+          <i class="fas fa-comment shortmenu animate"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">
+          <i class="fas fa-cart-plus"></i> Newsfeed
+          <i class="fas fa-cart-plus shortmenu animate"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/group">
+          <i class="fas fa-comment"></i> Groups
+          <i class="fas fa-comment shortmenu animate"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fas fa-comment"></i> Pages
+          <i class="fas fa-comment shortmenu animate"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fas fa-comment"></i> Friends
+          <i class="fas fa-comment shortmenu animate"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fas fa-comment"></i> Terms &amp; Conditions
+          <i class="fas fa-comment shortmenu animate"></i>
+        </a>
+      </li>     
+    </ul>
+    <ul class="navbar-nav ml-md-auto d-md-flex">
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fas fa-user"></i> Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">
+          <i class="fas fa-key"></i> Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

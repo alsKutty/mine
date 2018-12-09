@@ -1,0 +1,25 @@
+<!-- Card -->
+
+<div class="row">
+    <div class="col" *ngFor="let leader of leaders| orderBy: 'field_profile_lp_priorty_value' : false"><div class="card">
+
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" [src]="leader.uri" alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      
+        <!-- Card content -->
+        <div class="card-body">
+          <!-- Title -->
+          <h4 class="card-title">{{leader.field_profile_first_name_value}}</h4>
+          <h5>{{leader.field_profile_title_value}}</h5>
+          <!-- Text -->
+          <p class="card-text">{{leader.field_profile_bio_value}}</p>
+        </div>
+      
+      </div>
+      <!-- Card --></div>
+  </div>
